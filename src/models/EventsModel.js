@@ -11,6 +11,7 @@ const Eventsschema = mongoose.Schema({
   Guest_Count : String,
   Entry_Fees : String,
   Fees_Adults : String,
+  Event_Start_Time:String,
   Fees_Kids : String,
   Fees_Under5 : String,
   Participant_Type : String,
