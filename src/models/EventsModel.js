@@ -11,13 +11,18 @@ const Eventsschema = mongoose.Schema({
   city:String,
   pinCode:Number,
   address:String,
-  startDate:Date,
-  endDate:Date,
+  startDate:String,
+  endDate:String,
   startTime:String,
   endTime:String,
   eligibility_type:String,
+  registerLastDate:String,
+  event_mode_type:String,
+
+ 
 
 
+  
 
 
 
