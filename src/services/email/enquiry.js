@@ -58,7 +58,7 @@ const sendConfirmationMail = (data) => {
         name: 'Natomas Group Event',
         address: process.env.NODEMAILER_EMAIL
       },
-      to: [data.Email,'developer1.git@gmail.com'],
+      to: [data.Email,'muthuselvam10102002@gmail.com'],
       subject: data?.Poster_Type == "Donation"?`Thank You for Your Generous Donation!`:`Registration Confirmation for ${data.Title}`,
       html: data?.Poster_Type == "Donation"?Donation:register
       
