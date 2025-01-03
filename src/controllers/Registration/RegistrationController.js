@@ -6,8 +6,8 @@ import Stripe from 'stripe';
 import sendConfirmationMail from '../../services/email/enquiry.js';
 import { Subscription } from '../../models/SubscriptionModel.js';
 import { sendSubscriptionMail } from '../../services/email/Subscription.js';
-//const stripe = new Stripe('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');
-const stripe = new Stripe('sk_test_51PRoZDRqH9kU3X2FO2bxxXn2V0QX71OJbygMEtNkwM4OSN7I0vtv9ahDLNnhrU1LpjeTH9xfYLGrfZRGRwyqx1sD00paAOcepk');
+
+const stripe = new Stripe('sk_test_51QdB0fR28ysWdrNkgotuuQ9S4AyvfO4XcFkroowqMxRxbwpFKiH98gsW9Zp6ETCGasukEol8kcaPT2ULNsgYP6hC00jrjTSHu3');
 
 export const getallRegistrations = async (req, res, next) => {
   try {

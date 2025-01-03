@@ -5,8 +5,22 @@ const Eventsschema = mongoose.Schema({
   Images: Array,
   Title: String,
   Poster_Type: String,
-  Event_Date : Date,
-  Event_Time : String,
+  Event_Category_Type:String,
+  country:String,
+  state:String,
+  city:String,
+  pinCode:Number,
+  address:String,
+  startDate:Date,
+  endDate:Date,
+  startTime:String,
+  endTime:String,
+  eligibility_type:String,
+
+
+
+
+
   Peyment : String,
   Guest_Count : String,
   Entry_Fees : String,
