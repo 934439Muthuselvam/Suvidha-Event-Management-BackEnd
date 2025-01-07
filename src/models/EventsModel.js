@@ -13,18 +13,23 @@ const Eventsschema = mongoose.Schema({
   address:String,
   startDate:String,
   endDate:String,
-  startTime:String,
+  
   endTime:String,
   eligibility_type:String,
   registerLastDate:String,
   event_mode_type:String,
 
- 
-  
+  timeZone:String,
+  startTimePT: String,
+  startTimeMT: String,
+  startTimeCT: String,
+  startTimeET: String,
 
-  
-
-
+  endtimeZone:String,
+  endTimePT: String,
+  endTimeMT: String,
+  endTimeCT: String,
+  endTimeET: String,
 
   Peyment : String,
   Guest_Count : String,
