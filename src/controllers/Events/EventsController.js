@@ -64,13 +64,14 @@ export const getuniquevaluebyfield = async (req, res, next) => {
 
 export const saveEvent = async (req, res, next) => {
   try {
+    console.log("event",req.body)
     if (req.files && req.files.length !== 0) {
       req.body.Images = await Saveimages(req.files, 'Events')
     }
     if(req.body.Games){
       req.body.Games = JSON.parse(req.body.Games);
     }
-    //console.log(req.body)
+    
     const resdata = await new Events(req.body).save();
     const Email = await Subscription.distinct('Email',{Subscription_Status:"Subscriped"})
     if(Email.length != 0 && resdata.Poster_Type !="Donation"){

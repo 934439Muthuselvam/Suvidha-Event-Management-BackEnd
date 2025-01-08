@@ -14,22 +14,22 @@ const Eventsschema = mongoose.Schema({
   startDate:String,
   endDate:String,
   
-  endTime:String,
+  
   eligibility_type:String,
   registerLastDate:String,
   event_mode_type:String,
 
-  timeZone:String,
-  startTimePT: String,
-  startTimeMT: String,
-  startTimeCT: String,
-  startTimeET: String,
+  timeZone:{type: String,default: '00:00'},
+  startTimePT: {type: String,default: '00:00'},
+  startTimeMT: {type: String,default: '00:00'},
+  startTimeCT: {type: String,default: '00:00'},
+  startTimeET: {type: String,default: '00:00'},
 
-  endtimeZone:String,
-  endTimePT: String,
-  endTimeMT: String,
-  endTimeCT: String,
-  endTimeET: String,
+  endtimeZone:{type: String,default: '00:00'},
+  endTimePT: {type: String,default: '00:00'},
+  endTimeMT: {type: String,default: '00:00'},
+  endTimeCT: {type: String,default: '00:00'},
+  endTimeET: {type: String,default: '00:00'},
 
   Peyment : String,
   Guest_Count : String,
