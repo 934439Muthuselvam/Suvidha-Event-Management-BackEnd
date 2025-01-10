@@ -9,7 +9,7 @@ const Eventsschema = mongoose.Schema({
   country: {type: String,default: 'USA'},
   state:String,
   city:String,
-  pinCode:Number,
+  zipCode:String,
   address:String,
   startDate:String,
   endDate:String,
