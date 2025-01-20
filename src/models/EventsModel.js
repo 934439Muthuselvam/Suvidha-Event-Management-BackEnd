@@ -11,6 +11,7 @@ const Eventsschema = mongoose.Schema({
   city:String,
   zipCode:String,
   address:String,
+  maplink:String,
   startDate:String,
   endDate:String,
   
@@ -19,7 +20,7 @@ const Eventsschema = mongoose.Schema({
   registerLastDate:String,
   event_mode_type:String,
 
-  timeZone:{type: String,default: '00:00'},
+  timeZone:{type: String},
   startTimePT: {type: String,default: '00:00'},
   startTimeMT: {type: String,default: '00:00'},
   startTimeCT: {type: String,default: '00:00'},
@@ -30,6 +31,9 @@ const Eventsschema = mongoose.Schema({
   endTimeMT: {type: String,default: '00:00'},
   endTimeCT: {type: String,default: '00:00'},
   endTimeET: {type: String,default: '00:00'},
+  
+  range : String,
+  discount : String,
 
   Peyment : String,
   Guest_Count : String,
