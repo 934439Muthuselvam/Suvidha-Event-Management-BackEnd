@@ -34,7 +34,7 @@ const Eventsschema = mongoose.Schema({
   
   range : String,
   discount : String,
-
+  Family_discound:String,
   Peyment : String,
   Guest_Count : String,
   Fees_Audience : String,
