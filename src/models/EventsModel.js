@@ -32,8 +32,7 @@ const Eventsschema = mongoose.Schema({
   endTimeCT: {type: String,default: '00:00'},
   endTimeET: {type: String,default: '00:00'},
   
-  range : String,
-  discount : String,
+  fields:String,
   Family_discound:String,
   Peyment : String,
   Guest_Count : String,
