@@ -15,7 +15,7 @@ app.use(cors({
 }))
 
 app.use('/', router)
-app.get('/app', (req, res) => res.send('Welcome to Natomas Group'))
+app.get('/app', (req, res) => res.send('Welcome to Suvidha Foundation'))
 export default app
 
 
