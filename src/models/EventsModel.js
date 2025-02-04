@@ -10,6 +10,7 @@ const Eventsschema = mongoose.Schema({
   state:String,
   city:String,
   zipCode:String,
+  ParticipantsType:String,
   address:String,
   maplink:String,
   startDate:String,
