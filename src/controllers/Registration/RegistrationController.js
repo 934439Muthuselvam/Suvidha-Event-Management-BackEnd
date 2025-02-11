@@ -61,7 +61,6 @@ export const addSubscription = async (req, res, next) => {
 
 export const saveRegistration = async (req, res) => {
   try {
-
     const customer = await stripe.checkout.sessions.create ( {
       mode: 'payment',
       line_items: [
@@ -69,7 +68,7 @@ export const saveRegistration = async (req, res) => {
           price_data: {
             currency:"usd",
             product_data:{ name: req.body.Title },
-            unit_amount:`${req.body.Entry_Fees*100}`,
+            unit_amount:`${Math.round(req.body.Entry_Fees*100)}`,
           },
           quantity: 1,
         },
