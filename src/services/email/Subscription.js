@@ -18,14 +18,14 @@ export const sendSubscriptionMail = (data) => {
   
       let mailOptions = {
         from: {
-          name: 'Natomas Group Event',
+          name: 'Suvidha International Foundation',
           address: process.env.NODEMAILER_EMAIL
         },
         to: data.Email,
-        subject: `Subscription Confirmed! Welcome to Natomas Group Event`,
+        subject: `Subscription Confirmed! Welcome to Suvidha International Foundation`,
         html: `
             <p>Hi ${data.First_Name},</p>
-            <p>Thank you for subscribing to <strong>Natomas Group Event</strong>! We're thrilled to have you on board.</p>
+            <p>Thank you for subscribing to <strong>Suvidha International Foundation</strong>! We're thrilled to have you on board.</p>
             <p>You are now part of our community, and we can't wait to share the latest news, updates, and exclusive content with you. Here's a quick overview of what you can expect:</p>
             <ul>
                 <li><strong>Regular Updates:</strong> Stay informed with the latest news and features.</li>
@@ -33,10 +33,10 @@ export const sendSubscriptionMail = (data) => {
                 <li><strong>Community Interaction:</strong> Connect with like-minded individuals in our community.</li>
             </ul>
             <p>If you have any questions, feel free to reach out to us at <a href="mailto:venkatmechineni@yahoo.com">venkatmechineni@yahoo.com</a>. We're here to help!</p>
-            <p>Once again, thank you for subscribing. We look forward to bringing you the best of <strong>Natomas Group Event</strong>.</p>
+            <p>Once again, thank you for subscribing. We look forward to bringing you the best of <strong>Suvidha International Foundation</strong>.</p>
           
           <p>Best regards,</p>
-          <img src="https://natomasgroup.org/assets/Images/Logo/logo.png" style="width:150px" alt="" />
+          <img src="https://i.postimg.cc/J06ZzYnL/suvitha-logo1-removebg-preview.png" style="width:150px" alt="" />
         `
       }
   
@@ -85,7 +85,7 @@ export const sendEventNotification = async (data,Email) => {
 
         let mailOptions = {
             from: {
-                name: 'Natomas Group Event',
+                name: 'Suvidha International Foundation',
                 address: process.env.NODEMAILER_EMAIL
             },
             to: Email,
@@ -102,7 +102,7 @@ export const sendEventNotification = async (data,Email) => {
               
               <p>Best regards,</p>
               
-              <img src="https://natomasgroup.org/assets/Images/Logo/logo.png" style="width:150px" alt="" />
+              <img src="https://i.postimg.cc/J06ZzYnL/suvitha-logo1-removebg-preview.png" style="width:150px" alt="" />
             `
         }
 
