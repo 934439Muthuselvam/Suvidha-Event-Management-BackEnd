@@ -5,7 +5,8 @@ const Galleryschema = mongoose.Schema({
   Src: Array,
   Src_Type : String,
   Title: String,
-  Event_Date : Date
+  Event_Date : Date,
+
 }, { timestamps: true })
 
 const Gallery = conn.model('gallerys', Galleryschema);
