@@ -6,7 +6,7 @@ import Stripe from 'stripe';
 import sendConfirmationMail from '../../services/email/enquiry.js';
 import { Subscription } from '../../models/SubscriptionModel.js';
 import { sendSubscriptionMail } from '../../services/email/Subscription.js';
-//const stripe = new Stripe('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');
+//const stripe = new Stripe('')
 const stripe = new Stripe(process.env.StripeKey);
 
 export const getallRegistrations = async (req, res, next) => {
