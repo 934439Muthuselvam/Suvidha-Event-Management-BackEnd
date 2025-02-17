@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+
 import mongoose from 'mongoose'
 import { Registration } from '../../models/RegistrationModel.js'
 import { uniqueorderid } from '../../services/uniqueidService.js'
@@ -8,7 +8,7 @@ import { Subscription } from '../../models/SubscriptionModel.js';
 import { sendSubscriptionMail } from '../../services/email/Subscription.js';
 
 
-// 
+
 const stripe = new Stripe(process.env.StripeKey);
 
 export const getallRegistrations = async (req, res, next) => {
