@@ -27,7 +27,7 @@ const sendConfirmationMail = (data) => {
       
       <p>Best regards,</p>
       
-      <img src="https://natomasgroup.org/assets/Images/Logo/logo.png" style="width:150px" alt="" />
+      <img src="https://i.postimg.cc/J06ZzYnL/suvitha-logo1-removebg-preview.png" style="width:150px" alt="" />
     `
 
     const Donation = `
@@ -39,7 +39,7 @@ const sendConfirmationMail = (data) => {
       
       <p>Best regards,</p>
       
-      <img src="https://natomasgroup.org/assets/Images/Logo/logo.png" style="width:150px" alt="" />
+      <img src="https://i.postimg.cc/J06ZzYnL/suvitha-logo1-removebg-preview.png" style="width:150px" alt="" />
     `
     const transporter = nodemailer.createTransport({
       service: 'gmail',
@@ -55,10 +55,10 @@ const sendConfirmationMail = (data) => {
 
     let mailOptions = {
       from: {
-        name: 'Natomas Group Event',
+        name: 'Suvidha International Foundation',
         address: process.env.NODEMAILER_EMAIL
       },
-      to: [data.Email,'developer1.git@gmail.com'],
+      to: [data.Email,'muthuselvam10102002@gmail.com'],
       subject: data?.Poster_Type == "Donation"?`Thank You for Your Generous Donation!`:`Registration Confirmation for ${data.Title}`,
       html: data?.Poster_Type == "Donation"?Donation:register
       

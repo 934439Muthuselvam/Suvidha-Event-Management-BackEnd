@@ -10,12 +10,12 @@ app.use(morgan('dev'))
 app.use(compression())
 app.use('/uploads', express.static('uploads'))
 app.use(cors({
-  origin: ['http://localhost:5173','192.168.1.7:5173',],
+  origin: ['http://localhost:5173','192.168.1.34:5173',],
   credentials: true
 }))
 
 app.use('/', router)
-app.get('/app', (req, res) => res.send('Welcome to Natomas Group'))
+app.get('/app', (req, res) => res.send('Welcome to Suvidha Foundation'))
 export default app
 
 
