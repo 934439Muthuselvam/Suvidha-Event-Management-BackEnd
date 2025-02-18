@@ -10,7 +10,7 @@ app.use(morgan('dev'))
 app.use(compression())
 app.use('/uploads', express.static('uploads'))
 app.use(cors({
-  origin: ['http://localhost:5173','192.168.1.34:5173','suvidha-event-management-frontend.vercel.app'],
+  origin: ['http://localhost:5173','192.168.1.34:5173','https://suvidha-event-management-frontend.vercel.app'],
   credentials: true
 }))
 
