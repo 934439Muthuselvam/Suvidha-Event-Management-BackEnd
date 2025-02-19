@@ -11,7 +11,7 @@ const Saveimages = async (images, folpath) => {
       const filename = `uploads/${folpath}/${timestamp}_${fileName}`;
 
       // Upload to Vercel Blob Storage
-      const { url } = await put(filename, image.buffer, {token:env.process.BLOB_READ_WRITE_TOKEN });
+      const { url } = await put(filename, image.buffer, {token:process.env.BLOB_READ_WRITE_TOKEN });
 
       imageMap.push(url); // Store the public URL
     }
