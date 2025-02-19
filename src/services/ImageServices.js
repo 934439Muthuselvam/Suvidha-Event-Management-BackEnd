@@ -10,6 +10,7 @@ const Saveimages = async (images, folpath) => {
       const binaryData = Buffer.from(image.buffer, 'base64')
       const timestamp = new Date().getTime()
       const directoryPath = path.join(__dirname, '../../uploads', folpath)
+      console.log("directoryPath",directoryPath)
       if (!fs.existsSync(directoryPath)) {
         fs.mkdirSync(directoryPath, { recursive: true })
       }
@@ -19,6 +20,7 @@ const Saveimages = async (images, folpath) => {
       const tempFilePath = path.join(__dirname, '../../uploads', filename)
       fs.writeFileSync(tempFilePath, binaryData)
       imageMap.push(`uploads${filename}`)
+      console.log("imageMap",imageMap)
     }
     return imageMap
   } catch (err) {
