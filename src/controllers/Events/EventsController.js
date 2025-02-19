@@ -67,6 +67,7 @@ export const saveEvent = async (req, res, next) => {
     console.log("event",req.body)
     if (req.files && req.files.length !== 0) {
       req.body.Images = await Saveimages(req.files, 'Events')
+      console.log("body images",req.body.Images)
     }
     if(req.body.Games){
       req.body.Games = JSON.parse(req.body.Games);
