@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 import { Events } from '../../models/EventsModel.js'
-import { Saveimages } from '../../services/ImageServices.js'
 import { sendEventNotification } from '../../services/email/Subscription.js';
 import { Subscription } from '../../models/SubscriptionModel.js';
+import { SaveImages } from '../../services/ImageServices.js';
 
 export const getallEvent = async (req, res, next) => {
   try {
@@ -66,8 +66,8 @@ export const saveEvent = async (req, res, next) => {
   try {
     console.log("event",req.body)
     if (req.files && req.files.length !== 0) {
-      req.body.Images = await Saveimages(req.files, 'Events')
-      
+      const media = await SaveImages(req.files, 'Events')
+      if(media){req.body.Images=media}else return res.send("somethin went wrong")
       console.log("body images",req.body.Images)
     }
     if(req.body.Games){
@@ -89,7 +89,8 @@ export const updateEvent = async (req, res, next) => {
   try {
     const { _id } = req.query
     if (req.files && req.files.length !== 0) {
-      req.body.Images = await Saveimages(req.files, 'Events')
+      const media = await SaveImages(req.files, 'Events')
+      if(media){req.body.Images=media}else return res.send("somethin went wrong")
     }
     if(req.body.Games){
       req.body.Games = JSON.parse(req.body.Games);

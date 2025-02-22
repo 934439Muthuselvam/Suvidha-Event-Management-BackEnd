@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
-import { Saveimages } from '../../services/ImageServices.js'
 import { Gallery } from '../../models/GalleryModel.js';
 import fs from "fs";
+import { SaveImages } from '../../services/ImageServices.js';
 
 export const getallGallery = async (req, res, next) => {
   try {
@@ -77,7 +77,8 @@ export const saveGallery = async (req, res, next) => {
   try {
     if (req.files && req.files.length !== 0) {
         console.log(req.files)
-        req.body.Src = await Saveimages(req.files, `Gallery/${req.body.Src_Type}`)
+        req.body.Src = await SaveImages(req.files, `Gallery/${req.body.Src_Type}`)
+        
     }
     console.log(req.body)
     const resdata = await new Gallery(req.body).save()
@@ -92,7 +93,7 @@ export const updateGallery = async (req, res, next) => {
     const { _id } = req.query
 
     if (req.files && req.files.length !== 0) {
-      req.body.Src = await Saveimages(req.files, `Gallery/${req.body.Src_Type}`)
+      req.body.Src = await SaveImages(req.files, `Gallery/${req.body.Src_Type}`)
     }
 
     const resdata = await Gallery.findOneAndUpdate({ _id }, req.body, { new: true })
