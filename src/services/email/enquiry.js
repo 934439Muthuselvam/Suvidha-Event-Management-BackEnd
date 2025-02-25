@@ -11,8 +11,9 @@ const sendConfirmationMail = (data) => {
       <p>We are excited to confirm your registration for the upcoming event. Here are the details:</p>
 
       <p>Registration No: ${data.Registration_id}</p>
-      <p>Event Date: ${moment(data.Event_Date).format('YYYY-MM-DD')}</p>
-      <p>Event Time: ${data.Event_Time}</p>
+      <p>Event Date: ${moment(data.startDate).format('YYYY-MM-DD')}</p>
+      <p>Event Time: ${data.startTimePT}</p>
+      <p>Event TimeZone: ${data.timeZone}</p>
       <p style="display:${data.Payment_id?'block':'none'}">Payment id: ${data.Payment_id}</p>
       <p style="display:${data.Payment_Status && data.Payment_Status!='Not Paid'?'block':'none'}">Payment Status: ${data.Payment_Status}</p>
       <p style="display:${data.Total_Amount && data.Total_Amount!='Free'?'block':'none'}">Paid Amount: $${data.Total_Amount}</p>
@@ -21,7 +22,7 @@ const sendConfirmationMail = (data) => {
       
       <p>We have successfully received your registration and you are now officially enrolled in the event. Please keep this confirmation email for your records.</p>
       
-      <p>If you have any questions or need further assistance, please do not hesitate to contact us at <a href="mailto:venkatmechineni@yahoo.com">venkatmechineni@yahoo.com</a>.</p>
+      <p>If you have any questions or need further assistance, please do not hesitate to contact us at <a href="mailto:muthuselvam73.bit@gmail.com">muthuselvam73.bit@gmail.com</a>.</p>
       
       <p>We look forward to celebrating ${data.Title} with you!</p>
       
@@ -35,7 +36,7 @@ const sendConfirmationMail = (data) => {
      
       <p>We are incredibly grateful for your generous donation of <strong>$${data.Total_Amount}</strong> to <strong>Natomas Group</strong>.</p>
 
-      <p>If you have any questions or would like to get involved further, please don’t hesitate to reach out to us at <a href=""mailto:venkatmechineni@yahoo.com" style="color: #4CAF50;">venkatmechineni@yahoo.com</a>.</p>
+      <p>If you have any questions or would like to get involved further, please don’t hesitate to reach out to us at <a href=""mailto:muthuselvam73.bit@gmail.com" style="color: #4CAF50;">muthuselvam73.bit@gmail.com</a>.</p>
       
       <p>Best regards,</p>
       

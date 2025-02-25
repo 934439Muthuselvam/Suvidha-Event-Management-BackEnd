@@ -32,7 +32,7 @@ export const sendSubscriptionMail = (data) => {
                 <li><strong>Exclusive Content:</strong> Enjoy special content available only to our subscribers.</li>
                 <li><strong>Community Interaction:</strong> Connect with like-minded individuals in our community.</li>
             </ul>
-            <p>If you have any questions, feel free to reach out to us at <a href="mailto:venkatmechineni@yahoo.com">venkatmechineni@yahoo.com</a>. We're here to help!</p>
+            <p>If you have any questions, feel free to reach out to us at <a href="mailto:muthuselvam73.bit@gmail.com">muthuselvam73.bit@gmail.com</a>. We're here to help!</p>
             <p>Once again, thank you for subscribing. We look forward to bringing you the best of <strong>Suvidha International Foundation</strong>.</p>
           
           <p>Best regards,</p>
